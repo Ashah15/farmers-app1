@@ -12,3 +12,9 @@ Sample_data = [{"receipt_number":"LAS7WNWDR5","completion_time":"2017-01-28 13:2
 {"receipt_number":"LAS4WJU9OU","completion_time":"2017-01-28 07:48:08","balance":2036.84,"transaction":-150.0,"description":"Merchant Payment to 166457 - KAFFE AFRICANA BISTRO LIMITED."},
 {"receipt_number":"LAR7WGO6JP","completion_time":"2017-01-27 19:27:29","balance":2186.84,"transaction":-2965.0,"description":"Merchant Payment to 978204 - TUSKYS JUJA"},
 {"receipt_number":"LAR5WFRH2H","completion_time":"2017-01-27 18:28:22","balance":5151.84,"transaction":5000.0,"description":"Business Payment from 329330 - B2C Standard Chartered Bank via API"}]
+
+from operator import itemgetter
+
+Sample_data.sort(key=itemgetter('transaction'))
+
+print (Sample_data)
